@@ -1,17 +1,22 @@
-const { defineConfig } = require("cypress");
+const { lighthouse, prepareAudit } = require('@cypress-audit/lighthouse');
+const { pa11y } = require('@cypress-audit/pa11y');
 
-module.exports = defineConfig({
+module.exports = {
   e2e: {
+    baseUrl: 'http://localhost:4200',
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-  },
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        prepareAudit(launchOptions);
+      });
 
-  component: {
-    devServer: {
-      framework: "angular",
-      bundler: "webpack",
+      on('task', {
+        lighthouse: lighthouse((lighthouseReport) => {
+          console.log(lighthouseReport);
+        }),
+        pa11y: pa11y((pa11yReport) => {
+          console.log(pa11yReport);
+        }),
+      });
     },
-    specPattern: "**/*.cy.ts",
   },
-});
+};
