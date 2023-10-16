@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-describe('Teste de Renderização de página homepage na viewport de 1400px', () => {
+describe('Teste de Renderização da página homepage na viewport de 1400px', () => {
   beforeEach(() => {
     cy.visit('http://localhost:4200/').viewport(1400, 800);
   });
 
-  describe('Testes de renderização do header', () => {
+  context('Testes de renderização do header', () => {
     it('Deve exibir a logomarca', () => {
       cy.get('.logo-pipoca').should('be.visible');
 
@@ -41,7 +41,7 @@ describe('Teste de Renderização de página homepage na viewport de 1400px', ()
     });
   });
 
-  describe('Teste de renderização do conteúdo principal', () => {
+  context('Teste de renderização do conteúdo principal', () => {
     it('Deve exibir um fundo em desfoque por trás do título', () => {
       cy.get('#title-background').should('be.visible');
     });
@@ -111,9 +111,7 @@ describe('Teste de Renderização de página homepage na viewport de 1400px', ()
     });
 
     it('Deve exibir um vídeo de apresentação', () => {
-      cy.get('.apresentacao .fullscreen #presentation-video').should(
-        'be.visible',
-      );
+      cy.get('#presentation-video').should('be.visible');
     });
 
     it('Deve exibir um texto "Veja nossa apresentação!" “#txt-presentation-video”', () => {
@@ -165,7 +163,7 @@ describe('Teste de Renderização de página homepage na viewport de 1400px', ()
     });
   });
 
-  describe('Teste de renderização do footer', () => {
+  context('Teste de renderização do footer', () => {
     it('Deve exibir o footer em space-around', () => {
       cy.get('.footer-container').should('be.visible');
 
@@ -224,7 +222,6 @@ describe('Teste de Renderização de página homepage na viewport de 1400px', ()
     });
 
     it('Deve exibir os ícones das redes sociais do footer', () => {
-
       cy.wait(1000); // Espera 1 segundo para dar tempo de renderização
       cy.get('#footer-youtube').should('be.visible');
       cy.get('#footer-instagram').should('be.visible');
@@ -232,3 +229,4 @@ describe('Teste de Renderização de página homepage na viewport de 1400px', ()
     });
   });
 });
+
