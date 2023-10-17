@@ -5,7 +5,7 @@ describe('Teste de Cores e Estilos em uma viewport de 1400px', () => {
     cy.visit('http://localhost:4200/').viewport(1400, 800);
   });
 
-  context('Testes das cores e sombras das fontes', () => {
+  context('Testes das cores e sombras dos textos', () => {
     it('Deve exibir o texto do menu com a cor correta', () => {
       cy.get('.menu')
         .should('be.visible')
@@ -78,5 +78,53 @@ describe('Teste de Cores e Estilos em uma viewport de 1400px', () => {
         .should('have.css', 'color', 'rgb(255, 255, 255)');
     });
   });
+
+  context(
+    'Testes das cores e sombras de botões e ícones e cores de fundo',
+    () => {
+      it('Deve exibir o botão assinar com a cor correta', () => {
+        cy.get('#btn-access')
+          .should('be.visible')
+          .should(
+            'have.css',
+            'background',
+            'rgb(254, 207, 93) none repeat scroll 0% 0% / auto padding-box border-box',
+          );
+      });
+
+      it('Deve exibir a seção últimos vídeos com a cor de fundo correta', () => {
+        cy.get('.article-three')
+          .should('be.visible')
+          .should('have.css', 'background-color', 'rgba(0, 0, 0, 0)');
+      });
+
+      it('Deve exibir a na imagem de fundo microfone com a sombra correta', () => {
+        cy.get('.background-fullscreen')
+          .should('be.visible')
+          .should(
+            'have.css',
+            'box-shadow',
+            'rgba(0, 0, 0, 0.25) 0px 4px 4px 0px',
+          );
+      });
+
+      it('Deve exibir a no botão de acesso com a sombra correta', () => {
+        cy.get('.btn-access')
+          .should('be.visible')
+          .should(
+            'have.css',
+            'box-shadow',
+            'rgba(0, 0, 0, 0.25) 1px 14px 9px 0px',
+          );
+      });
+    },
+  );
 });
 
+// Testes das cores e sombras de botões e ícones e cores de fundo:
+// Deve exibir o ícone de person com a cor #FFFFFF “#icon-person”;
+// Deve exibir o botão assinar com a cor #FECF5D “#btn-access”;
+// Deve exibir uma cor de fundo na página com a cor #201C1C;
+// Deve exibir uma sombra na imagem de fundo com a cor rgba(0, 0, 0, 0.25) “#microphone-background”;
+// Deve exibir uma sombra no botão de acesso com a cor rgba(0, 0, 0, 0.25) “#btn-access”;
+// Deve exibir uma cor de fundo na faixa preta com a cor #000000 “#black-background”.

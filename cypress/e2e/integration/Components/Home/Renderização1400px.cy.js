@@ -69,11 +69,7 @@ describe('Teste de Renderização da página homepage na viewport de 1400px', ()
     });
 
     it('Deve exibir o botão assinar como o texto "ASSINAR"', () => {
-      cy.get('.btn-container')
-        .find('#btn-access')
-        .should('be.visible')
-        .find('#btn-access')
-        .should('have.text', 'ASSINAR');
+      cy.get('#btn-access').should('be.visible').should('have.text', 'ASSINAR');
     });
 
     it('Deve exibir uma imagem de fundo com as dimensões 1400px x 810px', () => {
@@ -229,4 +225,3 @@ describe('Teste de Renderização da página homepage na viewport de 1400px', ()
     });
   });
 });
-
