@@ -120,11 +120,3 @@ describe('Teste de Cores e Estilos em uma viewport de 1400px', () => {
     },
   );
 });
-
-// Testes das cores e sombras de botões e ícones e cores de fundo:
-// Deve exibir o ícone de person com a cor #FFFFFF “#icon-person”;
-// Deve exibir o botão assinar com a cor #FECF5D “#btn-access”;
-// Deve exibir uma cor de fundo na página com a cor #201C1C;
-// Deve exibir uma sombra na imagem de fundo com a cor rgba(0, 0, 0, 0.25) “#microphone-background”;
-// Deve exibir uma sombra no botão de acesso com a cor rgba(0, 0, 0, 0.25) “#btn-access”;
-// Deve exibir uma cor de fundo na faixa preta com a cor #000000 “#black-background”.
