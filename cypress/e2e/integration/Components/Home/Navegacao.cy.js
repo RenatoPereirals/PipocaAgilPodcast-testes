@@ -51,30 +51,35 @@ describe('Teste de Navegação e links da página homepage na viewport de 1400px
         expect(href).to.exist;
       });
     });
+
     it('Deve verificar se o ícone do Instagram está correto', () => {
       cy.get('#link-instagram').should(($element) => {
         const href = $element.attr('href');
         expect(href).to.exist;
       });
     });
+
     it('Deve verificar se o ícone do linkedin está correto', () => {
       cy.get('#link-linkedin').should(($element) => {
         const href = $element.attr('href');
         expect(href).to.exist;
       });
     });
+
     it('Deve verificar se o ícone do twitter está correto', () => {
       cy.get('#link-twitter').should(($element) => {
         const href = $element.attr('href');
         expect(href).to.exist;
       });
     });
+
     it('Deve verificar se o ícone do facebook está correto', () => {
       cy.get('#link-facebook').should(($element) => {
         const href = $element.attr('href');
         expect(href).to.exist;
       });
     });
+    
     it('Deve verificar se o ícone do spotify está correto', () => {
       cy.get('#link-spotify').should(($element) => {
         const href = $element.attr('href');

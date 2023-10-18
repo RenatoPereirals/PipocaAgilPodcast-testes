@@ -120,3 +120,4 @@ describe('Teste de Cores e Estilos em uma viewport de 1400px', () => {
     },
   );
 });
+

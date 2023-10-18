@@ -39,7 +39,7 @@ Siga estas etapas para executar os testes em seu ambiente local:
    Certifique-se de ter o Node.js instalado. Em seguida, navegue até o diretório do projeto e execute:
 
    ```shell
-   cd PipocaAgil
+   cd PipocaAgil-testes
    npm install
    ```
 
@@ -63,5 +63,3 @@ Siga estas etapas para executar os testes em seu ambiente local:
 Sinta-se à vontade para contribuir com novos testes, melhorias ou correções. Abra um problema ou envie uma solicitação de pull.
 
 ---
-
-Este README fornece informações sobre o que os testes de integração Cypress fazem, as tecnologias usadas e como executá-los em seu ambiente local. Certifique-se de personalizar os URLs de clonagem e as instruções de acordo com o seu repositório e configuração específicos.
