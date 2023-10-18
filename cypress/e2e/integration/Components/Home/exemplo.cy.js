@@ -10,7 +10,7 @@ describe('Exemplo de teste', () => {
       cy.get('#title').should('be.visible');
     });
 
-    it('Deve exibir o título "O Podcast mais animado do Mundo Ágil"', () => {
+    it('Deve exibir o título contendo "O Podcast mais animado do Mundo Ágil"', () => {
       cy.get('#title')
         .should('be.visible')
         .should('have.text', '“O Podcast mais animado do Mundo Ágil”');
@@ -22,13 +22,13 @@ describe('Exemplo de teste', () => {
         .should('have.css', 'font-size', '96px');
     });
 
-    it('Deve exibir o título com um font-size de 96px', () => {
+    it('Deve exibir o título com uma cor de rgb(254, 207, 93)', () => {
       cy.get('#title')
         .should('be.visible')
         .should('have.css', 'color', 'rgb(254, 207, 93)');
     });
 
-    it('Deve redirecionar para página cadastro', () => {
+    it('Deve redirecionar para página cadastro ai clicar no botão ASSINAR', () => {
       cy.get('#btn-access').click();
       cy.url().should('eq', 'http://localhost:4200/cadastro');
     });
