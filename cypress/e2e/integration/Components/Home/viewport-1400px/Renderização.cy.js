@@ -72,7 +72,7 @@ describe('Teste de Renderização da página homepage na viewport de 1400px', ()
       cy.get('#btn-access').should('be.visible').should('have.text', 'ASSINAR');
     });
 
-    it('Deve exibir uma imagem de fundo com as dimensões 1400px x 810px', () => {
+    it('Deve exibir uma imagem de fundo com as dimensões 100% x 810px', () => {
       cy.get('#microphone-background').then(($element) => {
         const parentWidth = $element.parent().width();
         const imageWidth = $element.width();
