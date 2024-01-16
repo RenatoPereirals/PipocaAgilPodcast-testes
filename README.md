@@ -2,7 +2,13 @@
 
 # Testes de Integração Cypress para Pipoca Ágil
 
-Neste repositório, você encontrará os testes de integração Cypress para a aplicação Pipoca Ágil. Esses testes garantem que a aplicação funcione conforme o esperado e mantenha um alto nível de qualidade.
+Bem-vindo ao projeto de testes do Pipoca Ágil, uma parte integral do nosso processo de desenvolvimento. Este projeto é dedicado à implementação de testes de unidade, que são fundamentais para garantir a qualidade e a confiabilidade do nosso código.
+
+Embora o projeto ainda esteja em desenvolvimento e a cobertura de testes de unidade ainda não seja ideal, estamos comprometidos em melhorar continuamente nossos esforços de teste. Reconhecemos a importância dos testes de unidade, integração e sistema para identificar e corrigir problemas precocemente, melhorar a qualidade do código e acelerar o tempo de desenvolvimento.
+
+Este projeto de testes destaca nossa dedicação em seguir as melhores práticas de desenvolvimento de software. Estamos ansiosos para expandir nossos esforços de teste à medida que o projeto avança, incluindo a implementação de testes de integração e sistema no futuro.
+
+Por favor, note que este é o projeto de testes e pode sofrer alterações à medida que o projeto avança.
 
 ## O que será feito
 
